@@ -20,3 +20,8 @@ Hosts will be:
 * galera-mariadb02 (172.16.0.151)
 * galera-mariadb03 (172.16.0.152)
 
+#### WORK IN PROGRESS
+* change default passwords to use YAML or another config file for easier customization 
+* make IP address more dynamic rather than hard coded as it currently is
+
+Any suggestions welcome! 
