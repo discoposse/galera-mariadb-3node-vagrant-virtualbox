@@ -35,7 +35,7 @@ wsrep_node_address=172.16.0.151
 wsrep_node_name=galera-mariadb02
 " | sudo tee -a /etc/mysql/conf.d/cluster.cnf 
 
-sudo cp /vagrant/debian.conf /etc/mysql/
+sudo cp /vagrant/debian.cnf /etc/mysql/debian.cnf
 
 sudo service mysql stop 
 

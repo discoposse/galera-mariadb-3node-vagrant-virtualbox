@@ -35,26 +35,12 @@ wsrep_node_address=172.16.0.152
 wsrep_node_name=galera-mariadb03
 " | sudo tee -a /etc/mysql/conf.d/cluster.cnf 
 
-echo "
-[client]
-host     = localhost
-user     = debian-sys-maint
-password = O6SgjRhFR4EVHU5B
-socket   = /var/run/mysqld/mysqld.sock
-[mysql_upgrade]
-host     = localhost
-user     = debian-sys-maint
-password = O6SgjRhFR4EVHU5B
-socket   = /var/run/mysqld/mysqld.sock
-basedir  = /usr
-" | sudo tee -a /etc/mysql/debian.cnf 
-
-sudo cp /vagrant/debian.conf /etc/mysql/
+sudo cp /vagrant/debian.cnf /etc/mysql/debian.cnf
 
 sudo service mysql stop 
 
-sshpass -p "vagrant" ssh -o StrictHostKeyChecking=no vagrant@172.16.0.150 "sudo service mysql start --wsrep-new-cluster"
-sshpass -p "vagrant" ssh -o StrictHostKeyChecking=no vagrant@172.16.0.151 "sudo service mysql start"
+sudo sshpass -p "vagrant" ssh -o StrictHostKeyChecking=no vagrant@172.16.0.150 "sudo service mysql start --wsrep-new-cluster"
+sudo sshpass -p "vagrant" ssh -o StrictHostKeyChecking=no vagrant@172.16.0.151 "sudo service mysql start"
 sudo service mysql start
 
 

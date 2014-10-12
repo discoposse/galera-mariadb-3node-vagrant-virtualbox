@@ -37,7 +37,8 @@ wsrep_node_name=galera-mariadb01
 
 sudo service mysql stop 
 
-cp /etc/mysql/debian.cnf /vagrant/
+sudo rm /vagrant/debian.cnf 
+sudo cp /etc/mysql/debian.cnf /vagrant/debian.cnf
 
 
 
