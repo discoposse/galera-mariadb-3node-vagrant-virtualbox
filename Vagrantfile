@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
     
     # Virtualbox
     config.vm.box = "trusty64"
-    config.vm.box_url = "trusty-server-cloudimg-amd64-vagrant-disk1.box"
+    config.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/trusty/current/trusty-server-cloudimg-amd64-vagrant-disk1.box"
 
     #Default is 2200..something, but port 2200 is used by forescout NAC agent.
     config.vm.usable_port_range= 2800..2900 
